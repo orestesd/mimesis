@@ -1,0 +1,79 @@
+
+#container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 20px;
+}
+
+.main {
+  width: 600px;
+  margin: auto;
+}
+
+.board {
+  position: relative;
+}
+
+.board table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.board td {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+}
+
+.board.ungrid table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+.board.ungrid td {
+  border: none;
+}
+
+
+.sq-board .sq-status {
+  background-color: blue;
+}
+.sq-board td[status="0"] {
+  background-color: white;
+}
+.sq-board td[status="1"] {
+  background-image: linear-gradient(135deg, blue 50%, white 50%, white);
+}
+.sq-board td[status="2"] {
+  background-image: linear-gradient(-135deg, blue 50%, white 50%, white);
+}
+.sq-board td[status="3"] {
+  background-image: linear-gradient(45deg, blue 50%, white 50%, white);
+}
+.sq-board td[status="4"] {
+  background-image: linear-gradient(-45deg, blue 50%, white 50%, white);
+}
+.board td[status="5"] {
+}
+
+
+.legend table {
+  margin: auto;
+}
+.legend td {
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+}
+.legend td.current {
+  border: 2px solid red;
+}
+
+.actions span {
+  margin-right: 10px; 
+}

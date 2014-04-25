@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>mimesis</title>
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <div id="container">
+            <div class="init">
+                <form id="initform">
+                    <div>
+                        <label for="grid">Grid</label>
+                        <input type="number" min="1" max="50" id="width" value="20">x<input type="number" min="1" max="50" id="height" value="20">
+                    </div>
+                    <div>
+                        <label for="symmetry">Symmetry</label>
+                        <select id="symmetry">
+                            <option value="horizontal">horizontal</option>
+                            <option value="vertical">vertical</option>
+                            <option value="quad" selected>quad</option>
+                            <option value="none">none</option>
+                        </select>
+                    </div>
+                    <input type="submit" />
+                </form>
+            </div>
+            <div class="main" hidden>
+                <div class="actions">
+                    <span><a href="#back">back</a></span>
+                    <span><a href="#clear">clear</a></span>
+                    <span><a href="#grid">show/hide grid</a></span>
+                    <span></span>
+                </div>
+                <div class="sq-board legend">
+                    <table>
+                        <tr>
+                            <td status="0" class="sq-status"></td>
+                            <td status="1" class="sq-status"></td>
+                            <td status="2" class="sq-status"></td>
+                            <td status="3" class="sq-status"></td>
+                            <td status="4" class="sq-status"></td>
+                            <td status="5" class="sq-status current"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sq-board board" id="board"></div>
+            </div>
+        </div>
+        
+        <!-- This script will be bundled by the browserify task into dist/js/app.js -->
+        <!-- You should only ever really need this one script tag -->
+        <script src="js/app.browserify.js"></script>
+    </body>
+</html>
