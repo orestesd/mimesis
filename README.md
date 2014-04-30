@@ -1,5 +1,7 @@
 # mimesis
 
+[![Build Status](https://travis-ci.org/orestesd/mimesis.svg?branch=master)](https://travis-ci.org/orestesd/mimesis)
+
 This app allows creating symmetric patterns on the web.
 It was built to explore 
 
